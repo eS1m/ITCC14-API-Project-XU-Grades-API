@@ -2,8 +2,8 @@
 ## Members
 
 1. [Evan Daniel F. Simbajon](https://github.com/eS1m)
-2. [Kier Andree A Parantar](https://github.com/Krparantar)
-3. [Khrystian Dominic B Awatin](https://github.com/roigufipd)
+2. [Kier Andree A. Parantar](https://github.com/Krparantar)
+3. [Khrystian Dominic B. Awatin](https://github.com/roigufipd)
 4. [Jose Antonio Luna](https://github.com/JamesNK)
 
 ### Milestone 1 (Nov Week 1): API Discussions
