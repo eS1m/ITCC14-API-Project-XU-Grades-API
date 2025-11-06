@@ -43,6 +43,7 @@
 - **Checklist:**
   - [x] All endpoints done
   - [x] Full CRUD functionality
+  - [ ] Initial documentation
 
 ### Milestone 4 (Nov Week 4): HTML Front-end Integration
 
