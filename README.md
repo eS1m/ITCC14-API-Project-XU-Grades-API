@@ -3,7 +3,7 @@
 ## Team Members
 1. [Evan Daniel F. Simbajon](https://github.com/eS1m)
 2. [Khrystian Dominic B. Awatin](https://github.com/roigufipd)
-3. [Parantar, Kier Andree] (https://github.com/Krparantar)
+3. [Parantar, Kier Andree](https://github.com/Krparantar)
 4.  
 
 ### Milestone 1 (Nov Week 1): API Discussions
