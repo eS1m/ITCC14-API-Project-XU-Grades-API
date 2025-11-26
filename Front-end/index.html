@@ -7,6 +7,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ css_file }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="title">
@@ -16,12 +19,35 @@
                  data-alternate-logo="{{ alt_logo_img }}"
                  alt="Xavier University Logo">
         </div>
-        <h1 class="tester">one</h1>
         <div class="page-body">
             <div class="api-container">
+                <div class="api-student-search">
+                    <h1 class="bricolage-font">Name of student:</h1>
+                    <input type="text" id="name-input" class="modern-input" placeholder="Enter student's name...">
+                    <button id="searchStudentButton" class="modern-button">Search</button>
+                    <h3 id="search-result" class="bricolage-font"></h3>
+                </div>
+                <div class="api-semester-select">
+                    <h1 class="bricolage-font">Select a semester.</h1>
+                    <select id="semester-select" class="modern-input">
+                    </select>
+                </div>
+                <div class="api-class-select">
+                    <h1 class="bricolage-font">Select a class.</h1>
+                    <select id="class-select" class="modern-input">
+                    </select>
+                </div>
+                <div class="api-show-grades">
+                    <div class="grade-display bricolage-font">
+                        <p>Midterms: <span id="midterm-grade">--</span></p>
+                        <p>Finals: <span id="final-grade">--</span></p>
+                        <p>Remarks: <span id="grade-remarks">--</span></p>
+                    </div>
+                    <button id="back-button" class="modern-button">Back</button>
+                </div>
             </div>
         </div>
         
-        <script src="{{ js_file }}" async defer></script>
+        <script src="{{ js_file }}" defer></script>
     </body>
 </html>

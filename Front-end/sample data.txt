@@ -1,0 +1,47 @@
+{
+    "student_name": "Evan Daniel Simbajon",
+    "enrollment_status": "Enrolled",
+    "course": "Information Technology",
+    "year": 3,
+    "semesters": [
+        {
+            "name": "2025-2026-1",
+            "description": "1st Semester",
+            "classes": [
+                {
+                    "name": "ITCC 14 A",
+                    "description": "INTEGRATIVE PROGRAMING AND TECHNOLOGIES",
+                    "grades": [
+                        {
+                            "midterm_grade": 88,
+                            "final_grade": 92,
+                            "description": "Solid performance."
+                        }
+                    ]
+                },
+                {
+                    "name": "ITCC 33 A",
+                    "description": "ADVANCED DATABASE SYSTEMS",
+                    "grades": [
+                        {
+                            "midterm_grade": 100,
+                            "final_grade": 100,
+                            "description": "Perfect"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2025-2026-2",
+            "description": "2nd Semester",
+            "classes": [
+                {
+                    "name": "CS201 - Database Systems",
+                    "description": "Design and implementation of database systems.",
+                    "grades": []
+                }
+            ]
+        }
+    ]
+}

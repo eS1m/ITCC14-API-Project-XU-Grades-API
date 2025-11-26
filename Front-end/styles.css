@@ -39,13 +39,120 @@ body {
     box-shadow: 5px 5px;
     border: 1px solid #fffafa;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.api-student-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.api-semester-select {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px; /* Add some space from the search section */
+}
+
+.api-class-select {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px; /* Add some space from the semester section */
+}
+
+.api-show-grades {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.grade-display {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.grade-display p {
+    margin: 10px 0;
+}
+
+.api-container h1 {
+    color: #fffafa;
+}
+
+.api-container #search-result.success {
+    color: #a7f3d0; /* A light green for success */
+}
+
+.api-container #search-result.error {
+    color: #fca5a5; /* A light red for errors */
+}
+
+
 .tester {
     color: white;
     font-size: 1.2rem;
+}
+
+.modern-input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.modern-input:focus {
+    outline: none;
+    border-color: #7692ff;
+    box-shadow: 0 0 10px #7692ff;
+}
+
+.modern-button {
+    width: 15%;
+    background-color: #263a6e;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.modern-button:hover {
+    background-color: #1a284a;
+}
+
+@media screen and (max-width: 768px) {
+    .modern-button {
+        width: 70%;
+    }
 }
 
 
@@ -74,4 +181,32 @@ body {
     .logo.logo-alternate {
         max-width: 100%;
     }
+}
+
+/* Fonts */
+
+.bricolage-font {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* Grade Color Coding */
+.grade-fail {
+    color: #fca5a5; /* Red */
+}
+.grade-passing {
+    color: #fde047; /* Yellow */
+}
+.grade-good {
+    color: #a3e635; /* Green-Yellow */
+}
+.grade-very-good {
+    color: #4ade80; /* Green */
+}
+.grade-excellent {
+    color: #60a5fa; /* Lighter Blue */
 }
