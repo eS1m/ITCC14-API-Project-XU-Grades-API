@@ -7,7 +7,7 @@ app = Flask(__name__,
             static_folder='../Front-end',
             template_folder='../Front-end'
             )
-CORS(app) # This will enable CORS for all routes and origins
+CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
 api = Api(app)
@@ -139,10 +139,8 @@ class Students(Resource):
     def get(self):
         student_name_query = request.args.get('name')
         if student_name_query:
-            # Search for students whose name contains the query string (case-insensitive)
             students = StudentModel.query.filter(StudentModel.student_name.ilike(f'%{student_name_query}%')).all()
         else:
-            # If no name query, return all students
             students = StudentModel.query.all()
         
         return students, 200
@@ -177,7 +175,6 @@ class Student(Resource):
         if not student:
             abort(404, "Student not found")
         
-        # Filter out None values and update the student object
         update_data = {k: v for k, v in args.items() if v is not None}
         for key, value in update_data.items():
             setattr(student, key, value)
@@ -321,7 +318,6 @@ class Grade(Resource):
         if not grade:
             abort(404, f"Grade with id {grade_id} not found in this path")
 
-        # Filter out None values and update the grade object dynamically
         update_data = {k: v for k, v in args.items() if v is not None}
         for key, value in update_data.items():
             setattr(grade, key, value)
@@ -329,16 +325,6 @@ class Grade(Resource):
         db.session.commit()
         return grade
 
-<<<<<<< HEAD
-api.add_resource(Students, '/api/students/semester/classes/grades/', '/api/students/')
-api.add_resource(Student, '/api/students/<int:id>') // Displays the Student ID associated with the students
-api.add_resource(SemesterList, '/api/students/<int:student_id>/semesters/') // Displays the Semesters
-api.add_resource(Semester, '/api/students/<int:student_id>/semesters/<int:semester_id>') // Displays each Semester that the Student takes
-api.add_resource(ClassList, '/api/students/<int:student_id>/semesters/<int:semester_id>/classes/') // Displays the Classes under Semesters
-api.add_resource(Class, '/api/students/<int:student_id>/semesters/<int:semester_id>/classes/<int:class_id>') // Displays each Class
-api.add_resource(GradeList, '/api/students/<int:student_id>/semesters/<int:semester_id>/classes/<int:class_id>/grades/') // Displays the grades
-api.add_resource(Grade, '/api/students/<int:student_id>/semesters/<int:semester_id>/classes/<int:class_id>/grades/<int:grade_id>') // Displays grades of each student
-=======
 api.add_resource(Students, '/api/students/')
 api.add_resource(Student, '/api/students/<int:id>')
 api.add_resource(SemesterList, '/api/students/<int:student_id>/semesters/')
@@ -347,7 +333,6 @@ api.add_resource(ClassList, '/api/students/<int:student_id>/semesters/<int:semes
 api.add_resource(Class, '/api/students/<int:student_id>/semesters/<int:semester_id>/classes/<int:class_id>')
 api.add_resource(GradeList, '/api/students/<int:student_id>/semesters/<int:semester_id>/classes/<int:class_id>/grades/')
 api.add_resource(Grade, '/api/students/<int:student_id>/semesters/<int:semester_id>/classes/<int:class_id>/grades/<int:grade_id>')
->>>>>>> 7045fbe (feat: Fully functional website with simple navigation)
 
 @app.route('/')
 def home():
