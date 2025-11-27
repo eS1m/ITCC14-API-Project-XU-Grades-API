@@ -83,5 +83,5 @@
 - **Deliverables:**
   - Slide or short doc with key points.
 - **Checklist:**
-  - [ ] Demo data added (At least 3)
+  - [x] Demo data added (At least 3)
   - [ ] Extra data prepared (At least 1)
