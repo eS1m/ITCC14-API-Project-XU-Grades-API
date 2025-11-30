@@ -16,7 +16,7 @@
   - An initial `api.py` file with initial endpoints and CRUD functionality.
 - **Checklist:**
   - [x] Meeting for endpoints.
-  - [ ] A `endpoints.txt` file showing the endpoints along with it's description.
+  - [x] A `endpoints.txt` file showing the endpoints along with it's description.
 
 ### Milestone 2 (Nov Week 2): Continuation of creation of API
 
